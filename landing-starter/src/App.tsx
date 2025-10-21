@@ -2,12 +2,15 @@ import Bienvenida from "./Bienvenida";
 import InfoCurso from "./InfoCurso";
 import ListaCursos from "./ListaCursos";
 import Contador from "./Contador";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function App(){
   console.log("renderizada");
-  const cursos = ["javascript", "c++", "Rust", "BashScripting"];
+  const cursos = ["javascript", "c++", "Rust", "BashScripting", "Ensamblador", "gdscript"];
   const [contador, setContador] = useState(0);
+  useEffect(()=>{
+    console.log("solo una vez")
+  },[])
   return(
     <div>
       <h1>Landing Started</h1>
